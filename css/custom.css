@@ -1,0 +1,384 @@
+/**
+ * Havruta
+ */
+
+@import 
+url('https://fonts.googleapis.com/css?family=Tinos:400,700|Material+Icons&subset=hebrew');
+
+
+/*******************************************************************************
+ * Global
+ 
+******************************************************************************/
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*******************************************************************************
+ * Layout
+ 
+******************************************************************************/
+
+/* Small screens (default) */
+html {
+    font-size: 100%; /* 16px */
+}
+
+/* Small screens (480px) */
+@media (min-width: 30rem) {
+    html {
+        font-size: 112.5%; /* 18px */
+    }
+}
+
+/* Medium screens (768px) */
+@media (min-width: 48rem) {
+    html {
+        font-size: 125%; /* 20px */
+    }
+}
+
+/*******************************************************************************
+ * Grid
+ 
+******************************************************************************/
+
+.container {
+    max-width: 30rem;
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+
+.column .row {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+.column .row .column {
+    float: left;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    width: 50%;
+}
+
+.column .row .column.full{ width: 100%; }
+.column .row .column.two-thirds { width: 66.66666667%; }
+.column .row .column.half { width: 50%; }
+.column .row .column.third { width: 33.33333333%; }
+.column .row .column.fourth { width: 25%; }
+.column .row .column.three-fourths { width: 75%; }
+.column .row .column.fifth { width: 20%;}
+.column .row .column.two-fifths { width: 40%; }
+.column .row .column.three-fifths { width: 60%; }
+.column .row .column.four-fifths { width: 80%; }
+.column .row .column.flow-opposite { float: right; }
+
+/* Medium screens (480px) */
+@media (min-width: 30rem) {
+    .column, .row {
+        margin-bottom: 1.5rem;
+    }
+
+    .column:last-of-type, .row:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+/* Medium screens (768px) */
+@media (min-width: 48rem) {
+    .container {
+        padding: 0;
+        width: 90%;
+    }
+
+    .row {
+        margin-left: -1rem;
+        margin-right: -1rem;
+    }
+
+    .column {
+        float: left;
+        margin: 0;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        width: 50%;
+    }
+
+    .column.full{ width: 100%; }
+    .column.two-thirds { width: 66.66666667%; }
+    .column.half { width: 50%; }
+    .column.third { width: 33.33333333%; }
+    .column.fourth { width: 25%; }
+    .column.three-fourths { width: 75%; }
+    .column.fifth { width: 20%; }
+    .column.two-fifths { width: 40%; }
+    .column.three-fifths { width: 60%; }
+    .column.four-fifths { width: 80%; }
+    .column.flow-opposite { float: right; }
+}
+
+.clearfix:before, .clearfix:after, .row:before, .row:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after, .row:after {
+    clear: both;
+}
+
+.clearfix, .row {
+    *zoom: 1;
+}
+
+/*******************************************************************************
+ * General
+ 
+******************************************************************************/
+
+html {
+    line-height: 1.5;
+}
+
+body {
+    font-family: 'Tinos', serif;
+    text-align: right;
+    background: #fff;
+    direction: rtl;
+}
+
+img, textarea, iframe {
+    vertical-align: top;
+    width: 100%;
+}
+
+img, iframe {
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: 'Tinos', serif;
+    line-height: 1.5;
+}
+
+/*******************************************************************************
+ * Misc
+ 
+******************************************************************************/
+
+.material-icons {
+    vertical-align: top;
+    line-height: inherit;
+    font-size: 1em;
+    width: 1em;
+    height: 1em;
+}
+
+/*******************************************************************************
+ * Header
+ 
+******************************************************************************/
+
+body > header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background: #eee;
+}
+
+#header {
+    position: relative;
+    padding: 1rem 0;
+    padding-left: 4rem;
+}
+
+#header h1 {
+    font-size: 1rem;
+    margin: 0;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+
+#header h2 {
+    font-size: 1rem;
+    font-weight: normal;
+    margin: 0;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+
+#header img {
+    max-width: 3rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 1rem;
+    left: 0;
+}
+
+/*******************************************************************************
+ * Main
+ 
+******************************************************************************/
+
+body > main {
+    padding: 6rem 0 1rem;
+}
+
+/* Medium screens (480px) */
+@media (min-width: 30rem) {
+    body > main {
+        padding: 6.5rem 0 1.5rem;
+    }
+}
+
+/*******************************************************************************
+ * Article
+ 
+******************************************************************************/
+
+article > header {
+    color: #666;
+}
+
+article > header .column .row .column:first-child {
+    text-align: left;
+}
+
+article > header a {
+    color: #666;
+}
+
+article > section h1 {
+    margin: 0 0 1rem;
+    font-size: 1.375rem;
+    text-align: center;
+}
+
+article > section h2 {
+    margin: 0;
+    font-size: 1rem;
+    text-align: center;
+}
+
+article > section h3 {
+    margin: -1rem 0 1rem;
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+article > section h4 {
+    text-align: justify;
+    font-weight: normal;
+    font-size: 0.75rem;
+    margin: -0.875rem auto 1rem;
+    max-width: 90%;
+    -moz-text-align-last: center;
+    text-align-last: center;
+}
+
+article > section h5 {
+    text-align: center;
+    font-size: 0.875rem;
+    margin: 0 auto;
+    max-width: 90%;
+    font-weight: normal;
+}
+
+article > section h6 {
+    font-size: 1rem;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+article > section h6 + p {
+     column-count: 2;
+}
+
+article > section p {
+    margin: 0 0 1rem;
+    text-align: justify;
+    text-indent: 1.5rem;
+}
+
+article > section p:first-of-type {
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+
+/*******************************************************************************
+ * Footer
+ 
+******************************************************************************/
+
+body > footer {
+    display: none;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 9998;
+    background: #eee;
+    text-align: center;
+    padding: 1rem 0;
+    color: #666;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+body > footer strong {
+    color: #000;
+}
+
+/*******************************************************************************
+ * Ustrem Embed
+ ******************************************************************************/
+
+.stream-container {
+    margin: -1rem 0 1rem;
+}
+
+.stream {
+    position: relative;
+    padding-bottom: 56.25%; /* This is the aspect ratio */
+    overflow: hidden;
+    height: 0;
+}
+
+.stream iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    -webkit-box-sizing: content-box;
+       -moz-box-sizing: content-box;
+            box-sizing: content-box;
+}
+
+/* Medium screens (480px) */
+@media (min-width: 30rem) {
+    .stream-container {
+        margin: -1.5rem auto 1.5rem;
+    }
+}
+
+/* Medium screens (640px) */
+@media (min-width: 48rem) {
+    .stream-container {
+        max-width: 30rem;
+        margin-top: 0;
+    }
+}
